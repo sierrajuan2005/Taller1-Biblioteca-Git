@@ -195,4 +195,21 @@ public class Main {
         System.out.println("Prestamo registrado exitosamente.");
     }
 
+
+
+    public static void devolucion() {
+        System.out.print("\nID del prestamo a devolver: ");
+        String idPrestamo = sc.nextLine();
+
+        for (Prestamo p : prestamos) {
+            if (p.getIdPrestamo().equals(idPrestamo) && p.getEstado().equals("ACTIVO")) {
+                p.setEstado("DEVUELTO");
+                p.getLibro().setDisponible(true);
+                System.out.println("Devolucion registrada exitosamente.");
+                return;
+            }
+        }
+        System.out.println("Prestamo activo no encontrado.");
+    }
+
 }
