@@ -212,4 +212,18 @@ public class Main {
         System.out.println("Prestamo activo no encontrado.");
     }
 
+    public static void listarPrestamos() {
+        System.out.println("\n--- Prestamos Activos ---");
+        boolean hayActivos = false;
+        for (Prestamo p : prestamos) {
+            if (p.getEstado().equals("ACTIVO")) {
+                System.out.println(p);
+                hayActivos = true;
+            }
+        }
+        if (!hayActivos) {
+            System.out.println("No hay prestamos activos.");
+        }
+    }
+
 }
