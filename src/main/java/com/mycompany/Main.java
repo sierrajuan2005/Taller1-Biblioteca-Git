@@ -44,7 +44,31 @@ public class Main {
         }
         return null;
     }
-    
+
+    public static void actualizarCliente() {
+        System.out.print("\nID del cliente a actualizar: ");
+        String id = sc.nextLine();
+        Cliente cliente = buscarCliente(id);
+
+        if (cliente == null) {
+            System.out.println("Cliente no encontrado.");
+            return;
+        }
+
+        System.out.print("Nuevo nombre (" + cliente.getNombre() + "): ");
+        String nombre = sc.nextLine();
+        System.out.print("Nuevo telefono (" + cliente.getTelefono() + "): ");
+        String telefono = sc.nextLine();
+        System.out.print("Nuevo email (" + cliente.getEmail() + "): ");
+        String email = sc.nextLine();
+
+        cliente.setNombre(nombre);
+        cliente.setTelefono(telefono);
+        cliente.setEmail(email);
+
+        System.out.println("Cliente actualizado exitosamente.");
+    }
+
 
 
 }
