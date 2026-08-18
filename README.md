@@ -4,7 +4,7 @@
 Taller 1 - Programación de Computadores III - UPC
 
 ## Autor
-Juan Diego Sierra Tera - 1049927990
+Juan Diego Sierra Teran- 1049927990
 
 ## Descripción
 Aplicación de consola en Java para gestionar clientes, libros y préstamos
